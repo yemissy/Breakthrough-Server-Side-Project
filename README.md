@@ -20,23 +20,23 @@ You can build an Animal Shelter app that matchers adopters with potential pets. 
 The possibilities are endless, but keep in mind a reasonable scope for this project.
 
 ### Step 1. Plan Out Your Project Schema
-An ERD is required
-Project must have 2 or 3 models/entities
-Tables must be related via foreign key and primary key
-ERD must be approved by an instructor before any coding begins
+- An ERD is required
+- Project must have 2 or 3 models/entities
+- Tables must be related via foreign key and primary key
+- ERD must be approved by an instructor before any coding begins
 
 ### Step 2. Build Out the Back-end
-Create database migratations
-Build RESTful API routes that return data in a JSON format
-Only 1 model needs to have full CRUD
-Code must be encapsulated into classes
-Use POSTMAN to test your routes
+- Create database migratations
+- Build RESTful API routes that return data in a JSON format
+- Only 1 model needs to have full CRUD
+- Code must be encapsulated into classes
+- Use POSTMAN to test your routes
 
 ### Step 3. Build Out the Front-end (UI of your choice)
-Express Views
-React
+- Express Views
+- React
 
 ### Step 4. Stretch features
-Auth
-Additional models
-Any other rabit hole
+- Auth
+- Additional models
+- Any other rabit hole
