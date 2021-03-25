@@ -1,0 +1,30 @@
+{
+  "name": "Breakthrough-Server-Side-Project",
+  "version": "1.0.0",
+  "description": "You will be task with building an Express API to be consumed by a Front-end client.",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShrutiTamrakarTuladhar/Breakthrough-Server-Side-Project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ShrutiTamrakarTuladhar/Breakthrough-Server-Side-Project/issues"
+  },
+  "homepage": "https://github.com/ShrutiTamrakarTuladhar/Breakthrough-Server-Side-Project#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "knex": "^0.95.3",
+    "pg": "^8.5.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}

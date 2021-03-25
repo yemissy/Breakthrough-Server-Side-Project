@@ -1,6 +1,5 @@
 # Breakthrough-Server-Side-Project
 
-
 You will be task with building an Express API to be consumed by a Front-end client.
 
 ## Scope and Project Requirements
@@ -19,7 +18,8 @@ You can build an Animal Shelter app that matchers adopters with potential pets. 
 
 The possibilities are endless, but keep in mind a reasonable scope for this project.
 
-### Step 1. Plan Out Your Project Schema 
+### Step 1. Plan Out Your Project Schema
+
 ![Draft](https://github.com/ShrutiTamrakarTuladhar/Breakthrough-Server-Side-Project/blob/main/idea_diagram.png)
 
 - An ERD is required
@@ -28,17 +28,33 @@ The possibilities are endless, but keep in mind a reasonable scope for this proj
 - ERD must be approved by an instructor before any coding begins
 
 ### Step 2. Build Out the Back-end
+
 - Create database migratations
+
+  - npm init -y (package.json)
+  - npm i express (adding express modeules)
+  - npm install --save-dev nodemon (adding nodde mon)
+    change json pakage start to nodemon server.js
+  - npm install ejs
+  - npm install knex --save
+  - npm install pg
+  - node_modules/.bin/knex init (creates a knexfile.js)
+  - update knexfile to connect to database
+  - create a db.js file - pg promise is returned
+  - node_modules/.bin/knex migrate:make name-here
+
 - Build RESTful API routes that return data in a JSON format
 - Only 1 model needs to have full CRUD
 - Code must be encapsulated into classes
 - Use POSTMAN to test your routes
 
 ### Step 3. Build Out the Front-end (UI of your choice)
+
 - Express Views
 - React
 
 ### Step 4. Stretch features
+
 - Auth
 - Additional models
 - Any other rabit hole
