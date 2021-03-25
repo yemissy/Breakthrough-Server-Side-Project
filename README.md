@@ -19,7 +19,9 @@ You can build an Animal Shelter app that matchers adopters with potential pets. 
 
 The possibilities are endless, but keep in mind a reasonable scope for this project.
 
-### Step 1. Plan Out Your Project Schema
+### Step 1. Plan Out Your Project Schema 
+[Draft] [idea_diagram.png]
+
 - An ERD is required
 - Project must have 2 or 3 models/entities
 - Tables must be related via foreign key and primary key
