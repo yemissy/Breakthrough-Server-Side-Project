@@ -43,7 +43,7 @@ The possibilities are endless, but keep in mind a reasonable scope for this proj
   - create a db.js file - pg promise is returned
   - node_modules/.bin/knex migrate:make name-here
   - create databese in postgress and edit file to connect
-  - knex migrate:latest
+  - node_modules/.bin/knex migrate:latest
 
   - To see if table inside database run `\dt`
 
