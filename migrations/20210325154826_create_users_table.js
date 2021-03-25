@@ -10,6 +10,8 @@ exports.up = function(knex) {
     table.string('phone_number')
     table.date('first_does_date')
     table.date('second_dose_date')
+    table.integer('site_id')
+    
     table.foreign('site_id').references('sites.id')
   })
 };

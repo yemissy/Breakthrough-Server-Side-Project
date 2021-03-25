@@ -42,6 +42,10 @@ The possibilities are endless, but keep in mind a reasonable scope for this proj
   - update knexfile to connect to database
   - create a db.js file - pg promise is returned
   - node_modules/.bin/knex migrate:make name-here
+  - create databese in postgress and edit file to connect
+  - knex migrate:latest
+
+  - To see if table inside database run `\dt`
 
 - Build RESTful API routes that return data in a JSON format
 - Only 1 model needs to have full CRUD
