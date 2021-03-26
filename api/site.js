@@ -22,7 +22,7 @@ class Site {
   // get a specific site  
   /* [array insttance at 0] */
   static async find(id) {
-    const [site] = await db.any('SELECT * FROM sites WHERE id = $1', [id])
+    const site = await db.one('SELECT * FROM sites WHERE id = $1', [id])
       return new this(site)
   }
 
@@ -46,8 +46,8 @@ class Site {
   } 
 
   // most likely static 
-  delete(site_id) {
-
+  static async delete(site_id) {
+    await db.none('DELETE FROM sites WHERE id = $1',[site_id]); 
   } 
 
 

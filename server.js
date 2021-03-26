@@ -38,13 +38,24 @@ app.get('/sites/status/:siteStatus', async(req, res) => {
   const siteStatus = req.params.siteStatus
   try {
     const sites = await Site.filter(siteStatus); 
-    return res.send(sites);
+    return res.json(sites);
   } catch (err) {
     return res.status(500).send(err); 
   }
 });
 
+app.delete('/sites/:siteId', async(req, res) => {
+  const siteId = parseInt(req.params.siteId, 10)
+  try {
+      await Site.delete(siteId); 
+      res.status(204).json({
+      message: "success", 
+    })
+  } catch (err) {
+    return res.status(500).send(err); 
+  }
 
+})
 
 
 app.listen(PORT, () => {
