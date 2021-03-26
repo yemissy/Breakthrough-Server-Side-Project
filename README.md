@@ -47,6 +47,8 @@ The possibilities are endless, but keep in mind a reasonable scope for this proj
 
   - To see if table inside database run `\dt`
   - Add test data to tables
+  - Create seed files and run seed
+  - node_modules/.bin/knex seed:run
 
 - Build RESTful API routes that return data in a JSON format
 - Only 1 model needs to have full CRUD

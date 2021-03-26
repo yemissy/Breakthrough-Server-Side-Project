@@ -22,6 +22,15 @@ class Users extends Site_class {
     }
     //GET All Users
 
+    async getAllUsers(){
+        try{
+
+        }
+        catch(error){
+            console.log(error)
+        }
+    }
+
     //GET User with ID
 
     //GET Users with Site_ID
