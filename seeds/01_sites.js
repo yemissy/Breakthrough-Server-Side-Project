@@ -1,5 +1,5 @@
 
-const site_data = require('../sites_data')
+const site_data = require('../seed_data/sites_data.js')
 
 exports.seed = function(knex) {
   // Deletes ALL existing entries

@@ -22,7 +22,7 @@ class Site {
   // get a specific site  
   /* [array insttance at 0] */
   static async find(id) {
-    const [site] = await db.any('SELECT * FROM sites WHERE id = $1', id)
+    const [site] = await db.any('SELECT * FROM sites WHERE id = $1', [id])
       return new this(site)
   }
 
@@ -32,8 +32,8 @@ class Site {
   }
 
   // filter all active sites/ inactive sites - appoints avalibity 
-  static async filter(status){
-    const filteredSites = await db.any('SELECT * FROM sites WHERE status = $1', status)
+  static async filter(siteStatus){
+    const filteredSites = await db.any('SELECT * FROM sites WHERE status = $1', [siteStatus]); 
     return filteredSites; 
   }
 

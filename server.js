@@ -34,6 +34,18 @@ app.get('/sites/:siteId', async(req, res) => {
     }
 });
 
+app.get('/sites/status/:siteStatus', async(req, res) => {
+  const siteStatus = req.params.siteStatus
+  try {
+    const sites = await Site.filter(siteStatus); 
+    return res.send(sites);
+  } catch (err) {
+    return res.status(500).send(err); 
+  }
+});
+
+
+
 
 app.listen(PORT, () => {
   console.log(`listenining on http://localhost:${PORT}`)
