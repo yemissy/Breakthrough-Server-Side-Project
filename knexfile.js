@@ -1,16 +1,14 @@
 // Update with your config settings.
 
-// look up knex url thing 
-// Look at examples 
-
-
+// DATABASE_URL =
 module.exports = {
 
   development: {
     client: 'postgresql',
+    // connection: process.env.DATABASE_URL || { user: 'me', database: 'my_app' }
     connection: {
-      database: 'covid-project',
-      user: 'shruti',
+      database: 'covid-db',
+      user: 'missy',
       password: ''
     },
   },

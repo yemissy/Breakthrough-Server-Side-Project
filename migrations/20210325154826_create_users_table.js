@@ -8,7 +8,7 @@ exports.up = function(knex) {
     table.string('last_name')
     table.string('email').unique()
     table.string('phone_number')
-    table.date('first_does_date')
+    table.date('first_dose_date')
     table.date('second_dose_date')
     table.integer('site_id')
     
