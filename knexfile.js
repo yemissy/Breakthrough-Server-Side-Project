@@ -1,5 +1,9 @@
 // Update with your config settings.
 
+// look up knex url thing 
+// Look at examples 
+
+
 module.exports = {
 
   development: {

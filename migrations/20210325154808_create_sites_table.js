@@ -6,7 +6,7 @@ exports.up = function(knex) {
     table.increments('id')
     table.string("address")
     table.date("start_date")
-    table.string("status")  // Active / Inactive site 
+    table.string("status")  // Active / Inactive site  
   })
 };
 
