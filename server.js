@@ -14,13 +14,26 @@ const PORT = process.env.PORT || 3030
 // fat data-models skinny handles 
 
 app.get('/sites', async (req, res) => {
-  const sites = await Site.getAll(); 
-  res.send(sites); 
+  try {
+    const sites = await Site.getAll(); 
+    res.send(sites); 
+  } catch (err) {
+  res.status(500).json(err)
+  }
 }); 
 
 // Site.getAll(); 
 
-// console.log(Site.find(13)); 
+app.get('/sites/:siteId', async(req, res) => {
+    const siteId = req.params.siteId
+    try {
+      const site = await Site.find(siteId); 
+      return res.send(site);
+    } catch (err) {
+      return res.status(500).send(err); 
+    }
+});
+
 
 app.listen(PORT, () => {
   console.log(`listenining on http://localhost:${PORT}`)

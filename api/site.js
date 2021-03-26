@@ -23,25 +23,22 @@ class Site {
   /* [array insttance at 0] */
   static async find(id) {
     const [site] = await db.any('SELECT * FROM sites WHERE id = $1', id)
-
-    if(site) {
-      console.log(new this(site))
       return new this(site)
-    }  
-    // add else 
-
   }
 
   getUsers(){
     //const id = this.id; 
-    // select all from users where site id is equal id 
-
+    // select all from users where site id is equal id
   }
 
-  // filter all active sites/ inactive sites 
-  filter(status){
-
+  // filter all active sites/ inactive sites - appoints avalibity 
+  static async filter(status){
+    const filteredSites = await db.any('SELECT * FROM sites WHERE status = $1', status)
+    return filteredSites; 
   }
+
+  // filter by start_Date 
+  
 
   // static add a site to the database 
   create() {
