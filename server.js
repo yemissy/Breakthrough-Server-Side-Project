@@ -3,15 +3,12 @@ const express = require('express')
 
 const app = express();
 
-const Site = require('./api/site')
+const Site = require('./api/site');
+const sites_data = require('./seed_data/sites_data');
 
 app.use(express.json());
 
 const PORT = process.env.PORT || 3030
-
-
-// Add routes here
-// fat data-models skinny handles 
 
 app.get('/sites', async (req, res) => {
   try {
@@ -22,7 +19,20 @@ app.get('/sites', async (req, res) => {
   }
 }); 
 
-// Site.getAll(); 
+app.post('/sites', async (req, res) => {
+  try {
+      // console.log(req.body); 
+      const newSite = new Site(req.body); 
+      // console.log(newSite); 
+      const message = newSite.addSite(); 
+
+      res.send(message); 
+      
+  } catch (err) {
+    res.status(500).json(err);
+  }
+
+})
 
 app.get('/sites/:siteId', async(req, res) => {
     const siteId = req.params.siteId
@@ -34,11 +44,24 @@ app.get('/sites/:siteId', async(req, res) => {
     }
 });
 
+/*
+  put replaces object - looks inside 
+*/
+app.get('/sites/:siteId/users', async(req, res) => {
+  const siteId = req.params.siteId; 
+  try {
+    const users = await Site.getUser(siteId); 
+    return res.send(users); 
+  } catch (err) {
+    return res.status(500).send(err); 
+  }
+})
+
 app.get('/sites/status/:siteStatus', async(req, res) => {
   const siteStatus = req.params.siteStatus
   try {
-    const sites = await Site.filter(siteStatus); 
-    return res.json(sites);
+    const users = await Site.filter(siteStatus); 
+    return res.json(users);
   } catch (err) {
     return res.status(500).send(err); 
   }

@@ -26,9 +26,11 @@ class Site {
       return new this(site)
   }
 
-  getUsers(){
+ async getUsers(siteId){
     //const id = this.id; 
-    // select all from users where site id is equal id
+    // select all from users where site id is equal 
+    
+  
   }
 
   // filter all active sites/ inactive sites - appoints avalibity 
@@ -38,11 +40,12 @@ class Site {
   }
 
   // filter by start_Date 
-  
 
-  // static add a site to the database 
-  create() {
+  async addSite() {
 
+    await db.none('INSERT INTO sites (address, start_date, status) VALUES ($1, $2, $3)', [this.address,this.start_date,this.status])
+
+    return { message: "success"}
   } 
 
   // most likely static 
