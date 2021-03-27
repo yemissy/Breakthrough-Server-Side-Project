@@ -66,7 +66,8 @@ The possibilities are endless, but keep in mind a reasonable scope for this proj
 
 - Express Views
 - React
-- Hours to
+
+- Hours to site - alter table
 - users regresation
 - insurance for users - table (one to many)
 

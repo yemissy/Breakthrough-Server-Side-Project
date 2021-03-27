@@ -76,7 +76,6 @@ app.patch('/sites/:siteId', async (req, res) => {
   } catch (err) {
     res.status(500).send(err); 
   }
-
 })
 
 app.get('/sites/:siteId/getUsers', async(req, res) => {
@@ -89,6 +88,9 @@ app.get('/sites/:siteId/getUsers', async(req, res) => {
     return res.status(500).send(err); 
   }
 });
+
+// app.get -> filter currently open 
+
 
 
 app.listen(PORT, () => {
