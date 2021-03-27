@@ -42,18 +42,6 @@ app.get('/sites/:siteId', async(req, res) => {
     }
 });
 
-/*
-app.get('/sites/:siteId/user', async(req, res) => {
-  const siteId = parseInt(req.params.siteId); 
-  try {
-    const users = await db.any('SELECT * FROM users WHERE site_id = $1', siteId); 
-    return res.send(users); 
-  } catch (err) {
-    return res.status(500).send(err); 
-  }
-})
-*/
-
 app.get('/sites/status/:siteStatus', async(req, res) => {
   const siteStatus = req.params.siteStatus
   try {
@@ -82,7 +70,7 @@ app.patch('/sites/:siteId', async (req, res) => {
   const newStatus = req.body.status; 
   try {
     Site.changeStatus(siteId, newStatus); 
-    res.status(204).json({
+    res.status(200).json({
       message: "success",
     });
   } catch (err) {
@@ -90,6 +78,17 @@ app.patch('/sites/:siteId', async (req, res) => {
   }
 
 })
+
+app.get('/sites/:siteId/getUsers', async(req, res) => {
+  const siteId = req.params.siteId;
+  try {
+    console.log(siteId);
+    const users = await Site.getUsers(siteId);  
+    return res.send(users); 
+  } catch (err) {
+    return res.status(500).send(err); 
+  }
+});
 
 
 app.listen(PORT, () => {

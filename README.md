@@ -50,6 +50,13 @@ The possibilities are endless, but keep in mind a reasonable scope for this proj
   - Create seed files and run seed
   - node_modules/.bin/knex seed:run
 
+  - setup for enviroment:
+  - install dot-env
+  - create a .env file
+  - USER = ''
+  - DATABASE = ''
+  - PASSWORD = ''
+
 - Build RESTful API routes that return data in a JSON format
 - Only 1 model needs to have full CRUD
 - Code must be encapsulated into classes
@@ -59,6 +66,9 @@ The possibilities are endless, but keep in mind a reasonable scope for this proj
 
 - Express Views
 - React
+- Hours to
+- users regresation
+- insurance for users - table (one to many)
 
 ### Step 4. Stretch features
 

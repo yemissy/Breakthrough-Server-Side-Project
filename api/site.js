@@ -51,6 +51,12 @@ class Site {
     await db.none('UPDATE sites SET status=$1 WHERE id = $2', [newStatus, site_id]); 
   }
 
+  static async getUsers(site_id) {
+    console.log("inside getUser function")
+    const users = await db.any(`SELECT * FROM users WHERE site_id = ${site_id}`)
+    return users; 
+    
+  }
 }
 
 module.exports = Site; 
