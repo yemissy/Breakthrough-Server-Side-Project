@@ -1,5 +1,5 @@
 const db = require('../db')
-const Site_class = require('../api/site')
+const Site_class = require('./site')
 // CRUD (create, read, update, delete) 
 
 /* .get - read , .post - create, .put - update 
@@ -22,23 +22,42 @@ class Users extends Site_class {
     }
     //GET All Users
 
-    async getAllUsers(){
+    static async getAllUsers(req, res){
         try{
-
+            const users  = await db.any("SELECT * FROM users;")
+            return users;
         }
         catch(error){
-            console.log(error)
+            res.send(error)
         }
     }
-
     //GET User with ID
+    static async getUserWithId(id){
+        const user  = await db.any("SELECT * FROM users WHERE id = $1", id)
+        return user;
+    }
 
     //GET Users with Site_ID
 
     //Create/POST new USER 
+    static async createUser(){
+        const newUser  = await db.any("INSERT INTO USERS (first_name, last_name, email, phone_number, first_dose_date, second_dose_date, site_id) VALUES ($1, $2, $3, $4, $5, $6, $7)", [
+            this.first_name,
+            this.last_name,
+            this.email,
+            this.phone_number,
+            this.first_dose_date,
+            this.second_dose_date,
+            this.site_id
+        ])
+        return newUuser;
+    }
+
+
 
     //UPDATE a user with ID
 
     //DELETE a user
 
 }
+module.exports = Users;
