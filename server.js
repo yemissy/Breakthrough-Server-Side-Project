@@ -151,21 +151,19 @@ app.delete('/users/:userId', async(req, res) => {
     res.status(500).json(error)
   };
 })
-// app.patch('/users/:userId', async (req, res) => {
-//   const id = parseInt(req.params.userId);
-//   console.log(userId, 'line 156')
-//   const theUpdate = req.body.update; 
-//   console.log(theUpdate, 'line 159')
-//   try {
-//     await Users.updateUser(id, theUpdate); 
-//     res.status(200).json({
-//       message: "success",
-//     });
-//   } catch (err) {
-//     res.status(500).send(err); 
-//   }
+app.patch('/users/:userId', async (req, res) => {
+  const id = parseInt(req.params.userId);
+  const theUpdate = req.body; 
+  try {
+    await Users.updateUser(id, theUpdate); 
+    res.status(200).json({
+      message: "Successfully updated user",
+    });
+  } catch (err) {
+    res.status(500).send(err); 
+  }
 
-// })
+})
 
 app.listen(PORT, () => {
   console.log(`listenining on http://localhost:${PORT}`)

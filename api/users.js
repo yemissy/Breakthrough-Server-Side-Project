@@ -54,7 +54,7 @@ class Users{
     //UPDATE a user with ID
     //Can only update phone number for now
     static async updateUser(user_id, update){
-        await db.none('UPDATE users SET phone_number = $2 WHERE id = $1', [user_id, update]); 
+        await db.none("UPDATE users SET phone_number = $2, first_name = $3, email = $4 WHERE id = $1", [user_id, update.phone_number, update.first_name, update.email]); 
     }
 
 
