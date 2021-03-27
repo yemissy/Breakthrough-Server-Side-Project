@@ -6,7 +6,7 @@ module.exports = [
     phone_number: '917-764-0786',
     first_dose_date: "2021-03-26", 
     second_dose_date: "2021-04-16", 
-    site_id: '1'
+    site_id: 1
   }, 
   {
     first_name: 'Shruti',
@@ -15,7 +15,7 @@ module.exports = [
     phone_number: '917-832-0795',
     first_dose_date: "2021-03-05", 
     second_dose_date: "2020-03-19", 
-    site_id: '2'
+    site_id: 2
   }, 
   {
     first_name: 'John',
@@ -24,7 +24,7 @@ module.exports = [
     phone_number: '917-665-0788',
     first_dose_date: "2021-04-02", 
     second_dose_date: "2021-04-16", 
-    site_id: '1'
+    site_id: 1
   }, 
   {
     first_name: 'Mary',
@@ -33,7 +33,7 @@ module.exports = [
     phone_number: '646-892-0695',
     first_dose_date: "2021-04-16", 
     second_dose_date: "2021-04-30", 
-    site_id: '3'
+    site_id: 3
   }, 
   {
     first_name: 'Kevin',
@@ -42,6 +42,6 @@ module.exports = [
     phone_number: '213-653-0655', 
     first_dose_date: "2021-05-06", 
     second_dose_date: "2021-05-27", 
-    site_id: '2'
+    site_id: 2
   }, 
 ];
