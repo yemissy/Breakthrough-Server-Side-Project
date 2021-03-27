@@ -28,9 +28,8 @@ app.post('/sites', async (req, res) => {
       // console.log(req.body); 
       const newSite = new Site(req.body); 
       // console.log(newSite); 
-      const message = newSite.addSite(); 
-
-      res.send(message); 
+      newSite.addSite(); 
+      res.status(200).json({ message: "success"}); 
       
   } catch (err) {
     res.status(500).json(err);

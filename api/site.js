@@ -38,8 +38,6 @@ class Site {
   async addSite() {
 
     await db.none('INSERT INTO sites (address, start_date, status) VALUES ($1, $2, $3)', [this.address,this.start_date,this.status])
-
-    return { message: "success"}
   } 
 
   // most likely static 

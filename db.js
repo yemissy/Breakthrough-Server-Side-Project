@@ -6,8 +6,8 @@ const pg = require('pg-promise')()
 const db = pg({
   "host": "localhost",
   "port": 5432,
-  "database": "covid-db",
-  "user": "missy"
+  "database": "covid-project",
+  "user": "shruti"
 })
 
 module.exports = db;
