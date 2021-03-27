@@ -1,10 +1,8 @@
 const express = require('express')
-// const db = require('./db')
-
 const app = express();
 
 const Site = require('./api/site');
-const sites_data = require('./seed_data/sites_data');
+const db = require('./db');
 
 app.use(express.json());
 
@@ -45,17 +43,16 @@ app.get('/sites/:siteId', async(req, res) => {
 });
 
 /*
-  put replaces object - looks inside 
-*/
-app.get('/sites/:siteId/users', async(req, res) => {
-  const siteId = req.params.siteId; 
+app.get('/sites/:siteId/user', async(req, res) => {
+  const siteId = parseInt(req.params.siteId); 
   try {
-    const users = await Site.getUser(siteId); 
+    const users = await db.any('SELECT * FROM users WHERE site_id = $1', siteId); 
     return res.send(users); 
   } catch (err) {
     return res.status(500).send(err); 
   }
 })
+*/
 
 app.get('/sites/status/:siteStatus', async(req, res) => {
   const siteStatus = req.params.siteStatus
@@ -76,6 +73,20 @@ app.delete('/sites/:siteId', async(req, res) => {
     })
   } catch (err) {
     return res.status(500).send(err); 
+  }
+
+})
+
+app.patch('/sites/:siteId', async (req, res) => {
+  const siteId = parseInt(req.params.siteId, 10);
+  const newStatus = req.body.status; 
+  try {
+    Site.changeStatus(siteId, newStatus); 
+    res.status(204).json({
+      message: "success",
+    });
+  } catch (err) {
+    res.status(500).send(err); 
   }
 
 })

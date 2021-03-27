@@ -1,5 +1,6 @@
 const db = require('../db')
 
+
 class Site { 
   constructor({id,address,start_date,status}) {
     // Does the constructor have anything? 
@@ -26,13 +27,6 @@ class Site {
       return new this(site)
   }
 
- async getUsers(siteId){
-    //const id = this.id; 
-    // select all from users where site id is equal 
-    
-  
-  }
-
   // filter all active sites/ inactive sites - appoints avalibity 
   static async filter(siteStatus){
     const filteredSites = await db.any('SELECT * FROM sites WHERE status = $1', [siteStatus]); 
@@ -53,6 +47,9 @@ class Site {
     await db.none('DELETE FROM sites WHERE id = $1',[site_id]); 
   } 
 
+  static async changeStatus(site_id, newStatus) {
+    await db.none('UPDATE sites SET status=$1 WHERE id = $2', [newStatus, site_id]); 
+  }
 
 }
 
