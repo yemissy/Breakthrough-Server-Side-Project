@@ -39,8 +39,6 @@ class Users{
 
     //Create/POST new USER 
     async createUser(site_id){
-        console.log(site_id, 'line 43')
-        console.log(this.first_name, 'line 44')
         await db.none("INSERT INTO Users (first_name, last_name, email, phone_number, first_dose_date, second_dose_date, site_id) VALUES ($1, $2, $3, $4, $5, $6, $7)", [
             this.first_name,
             this.last_name,

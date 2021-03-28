@@ -1,9 +1,12 @@
 exports.up = function(knex) {
     return knex.schema.createTable('sites', function(table) {
       table.increments('id')
+      table.string('name')
       table.string("address")
-      table.date("start_date")
-      table.string("status")  // Active / Inactive site  
+      table.string('city');
+      table.string('state'); 
+      table.integer('zip_code'); 
+ // Active / Inactive site  
     })
   };
   

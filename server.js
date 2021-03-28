@@ -87,7 +87,7 @@ app.patch('/sites/:siteId', async (req, res) => {
 app.get('/sites/:siteId/getUsers', async(req, res) => {
   const siteId = req.params.siteId;
   try {
-    console.log(siteId);
+//    console.log(siteId);
     const users = await Site.getUsers(siteId);  
     return res.send(users); 
   } catch (err) {
@@ -103,7 +103,7 @@ app.get('/sites/:siteId/getUsers', async(req, res) => {
 
 //Get all users
 app.get('/users', async(req, res) => {
-  console.log(req.params, 'line 105')
+  // console.log(req.params, 'line 105')
   try{
     const users = await Users.getAllUsers(req.params.id);
     res.send(users);
@@ -114,7 +114,7 @@ app.get('/users', async(req, res) => {
 });
 
 app.get('/users/:userId', async(req, res) => {
-  console.log(req, 'line 115')
+  // console.log(req, 'line 115')
   const userId = parseInt(req.params.userId)
   try{
     const user = await Users.getUserWithId(userId);

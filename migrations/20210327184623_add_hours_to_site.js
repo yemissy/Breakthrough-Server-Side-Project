@@ -1,14 +1,16 @@
 
 exports.up = function(knex) {
   return knex.schema.alterTable('sites', function (table) {
-    table.time('opening_time');
-    table.time('closing_time');
+    table.date("start_date")
+    table.string("status") 
+    table.string('vaccine_type'); 
   } )
 };
 
 exports.down = function(knex) {
   return knex.schema.alterTable('sites', function(table) {
-    table.dropColumn('opening_time');
-    table.dropColumn('closing_time');
+    table.dropColumn("start_date")
+    table.dropColumn("status") 
+    table.dropColumn('vaccine_type'); 
   })
 };
