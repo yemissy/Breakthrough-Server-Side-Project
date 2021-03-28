@@ -2,29 +2,25 @@
 
 You will be task with building an Express API to be consumed by a Front-end client.
 
-## Scope and Project Requirements
+## Project Discription
 
-An Express API with 2 or 3 database models (tables).
-Your tables must have a relationship with each other.
-You should have full CRUD on at least 1 of your models.
-Your server should have RESTful routes that execute logic and return JSON data.
-And if time permits, a Front-End UI using Express views or React.
+- Vaccine Matcher is a third party app that connects people who want to get vaccinated with sites distributing the COVID-19 vaccine.
 
 - [x] **Step 1. Plan Out Your Project Schema**
 
-- Draft: 
+- Draft:
   <img src = https://github.com/ShrutiTamrakarTuladhar/Breakthrough-Server-Side-Project/blob/main/diagrams/idea_diagram.png width="400" >
 
 - ERD:
-  <img src = https://github.com/ShrutiTamrakarTuladhar/Breakthrough-Server-Side-Project/blob/main/diagrams/ERD-DIAGRAM.png width="400"> 
-  
+  <img src = https://github.com/ShrutiTamrakarTuladhar/Breakthrough-Server-Side-Project/blob/main/diagrams/ERD-DIAGRAM.png width="400">
 - [x] **Step 2. Build Out the Back-end**
 
 - Build RESTful API routes that return data in a JSON format
 - Only 1 model needs to have full CRUD
 - Code must be encapsulated into classes
 - Use POSTMAN to test your routes
-- Steps Taken: 
+- Steps Taken:
+
   - Create database migratations
     - npm init -y (package.json)
     - npm i express (adding express modeules)

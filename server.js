@@ -3,7 +3,6 @@ const app = express();
 
 const Site = require("./api/site")
 const Users = require("./api/users")
-const db = require('./db');
 
 app.use(express.json());
 
@@ -47,15 +46,40 @@ app.get('/sites/:siteId', async(req, res) => {
     }
 });
 
+//filter by status
 app.get('/sites/status/:siteStatus', async(req, res) => {
   const siteStatus = req.params.siteStatus
   try {
-    const users = await Site.filter(siteStatus); 
+    const users = await Site.filterStatus(siteStatus); 
     return res.json(users);
   } catch (err) {
     return res.status(500).send(err); 
   }
 });
+
+//filter by zipcode
+
+app.get('/sites/zipCode/:siteZipCode', async(req, res) => {
+  const siteZipCode = req.params.siteZipCode
+  try {
+    const users = await Site.filterZipCode(siteZipCode); 
+    return res.json(users);
+  } catch (err) {
+    return res.status(500).send(err); 
+  }
+});
+
+// filter by state
+app.get('/sites/state/:siteState', async(req, res) => {
+  const siteZipCode = req.params.siteState
+  try {
+    const users = await Site.filterState(siteZipCode); 
+    return res.json(users);
+  } catch (err) {
+    return res.status(500).send(err); 
+  }
+});
+
 
 app.delete('/sites/:siteId', async(req, res) => {
   const siteId = parseInt(req.params.siteId, 10)
@@ -95,7 +119,6 @@ app.get('/sites/:siteId/getUsers', async(req, res) => {
   }
 });
 
-// app.get -> filter currently open 
 
 
 
