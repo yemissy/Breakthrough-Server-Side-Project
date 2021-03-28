@@ -9,14 +9,6 @@ Your tables must have a relationship with each other.
 You should have full CRUD on at least 1 of your models.
 Your server should have RESTful routes that execute logic and return JSON data.
 And if time permits, a Front-End UI using Express views or React.
-Examples
-You can build Instagram (users and photos) where a user has many photos and a photo belongs to a user. You can view all the photos by a particiular user or have a "Discover" page that shows random photos.
-
-You can build Reddit (users, posts, comments) where a user writes posts, a posts has many comments, and a post and a comment belongs to a user.
-
-You can build an Animal Shelter app that matchers adopters with potential pets. An adopter might be matched with many pets and a pet might even be matched to many adopters.
-
-The possibilities are endless, but keep in mind a reasonable scope for this project.
 
 - [x] **Step 1. Plan Out Your Project Schema**
 
@@ -60,15 +52,9 @@ The possibilities are endless, but keep in mind a reasonable scope for this proj
 
 - [ ] **Step 3. Build Out the Front-end (UI of your choice)**
 
-- Express Views
-- React
-
-- Hours to site - alter table
-- users regresation
-- insurance for users - table (one to many)
+  - Express Views
+  - React
 
 - [ ] **Step 4. Stretch features**
-
-- Auth
-- Additional models
-- Any other rabit hole
+  - Registration and Authentication
+  - Insurance table; users - insurance (one to many)
