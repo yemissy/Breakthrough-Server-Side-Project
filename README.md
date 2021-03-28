@@ -20,7 +20,7 @@ The possibilities are endless, but keep in mind a reasonable scope for this proj
 
 ### Step 1. Plan Out Your Project Schema
 
-![Draft](https://github.com/ShrutiTamrakarTuladhar/Breakthrough-Server-Side-Project/blob/main/diagrams/idea_diagram.png | width=100))
+<img src = https://github.com/ShrutiTamrakarTuladhar/Breakthrough-Server-Side-Project/blob/main/diagrams/idea_diagram.png width="100" >
 
 - An ERD is required
 - Project must have 2 or 3 models/entities
@@ -32,7 +32,6 @@ The possibilities are endless, but keep in mind a reasonable scope for this proj
 ### Step 2. Build Out the Back-end
 
 - Create database migratations
-
   - npm init -y (package.json)
   - npm i express (adding express modeules)
   - npm install --save-dev nodemon (adding nodde mon)
@@ -46,19 +45,16 @@ The possibilities are endless, but keep in mind a reasonable scope for this proj
   - node_modules/.bin/knex migrate:make name-here
   - create databese in postgress and edit file to connect
   - node_modules/.bin/knex migrate:latest
-
   - To see if table inside database run `\dt`
   - Add test data to tables
   - Create seed files and run seed
   - node_modules/.bin/knex seed:run
-
   - setup for enviroment:
   - install dot-env
   - create a .env file
   - USER = ''
   - DATABASE = ''
   - PASSWORD = ''
-
 - Build RESTful API routes that return data in a JSON format
 - Only 1 model needs to have full CRUD
 - Code must be encapsulated into classes
