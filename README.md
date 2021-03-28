@@ -18,15 +18,15 @@ You can build an Animal Shelter app that matchers adopters with potential pets. 
 
 The possibilities are endless, but keep in mind a reasonable scope for this project.
 
-### - [X] Step 1. Plan Out Your Project Schema
+- [x] **Step 1. Plan Out Your Project Schema**
 
 - Draft: 
   <img src = https://github.com/ShrutiTamrakarTuladhar/Breakthrough-Server-Side-Project/blob/main/diagrams/idea_diagram.png width="400" >
 
 - ERD:
   <img src = https://github.com/ShrutiTamrakarTuladhar/Breakthrough-Server-Side-Project/blob/main/diagrams/ERD-DIAGRAM.png width="400"> 
-
-### - [X] Step 2. Build Out the Back-end
+  
+- [x] **Step 2. Build Out the Back-end**
 
 - Build RESTful API routes that return data in a JSON format
 - Only 1 model needs to have full CRUD
@@ -58,8 +58,7 @@ The possibilities are endless, but keep in mind a reasonable scope for this proj
     - DATABASE = ''
     - PASSWORD = ''
 
-
-### Step 3. Build Out the Front-end (UI of your choice)
+- [ ] **Step 3. Build Out the Front-end (UI of your choice)**
 
 - Express Views
 - React
@@ -68,7 +67,7 @@ The possibilities are endless, but keep in mind a reasonable scope for this proj
 - users regresation
 - insurance for users - table (one to many)
 
-### Step 4. Stretch features
+- [ ] **Step 4. Stretch features**
 
 - Auth
 - Additional models
