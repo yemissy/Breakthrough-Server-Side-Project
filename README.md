@@ -20,12 +20,14 @@ The possibilities are endless, but keep in mind a reasonable scope for this proj
 
 ### Step 1. Plan Out Your Project Schema
 
-![Draft](https://github.com/ShrutiTamrakarTuladhar/Breakthrough-Server-Side-Project/blob/main/diagrams/idea_diagram.png)
+![Draft](https://github.com/ShrutiTamrakarTuladhar/Breakthrough-Server-Side-Project/blob/main/diagrams/idea_diagram.png | width=100))
 
 - An ERD is required
 - Project must have 2 or 3 models/entities
 - Tables must be related via foreign key and primary key
 - ERD must be approved by an instructor before any coding begins
+
+
 
 ### Step 2. Build Out the Back-end
 
