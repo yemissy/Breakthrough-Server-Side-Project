@@ -20,7 +20,7 @@ The possibilities are endless, but keep in mind a reasonable scope for this proj
 
 ### Step 1. Plan Out Your Project Schema
 
-<img src = https://github.com/ShrutiTamrakarTuladhar/Breakthrough-Server-Side-Project/blob/main/diagrams/idea_diagram.png width="100" >
+<img src = https://github.com/ShrutiTamrakarTuladhar/Breakthrough-Server-Side-Project/blob/main/diagrams/idea_diagram.png width="400" >
 
 - An ERD is required
 - Project must have 2 or 3 models/entities
