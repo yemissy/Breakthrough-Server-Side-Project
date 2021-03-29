@@ -5,13 +5,19 @@ import './App.css';
 
 const BASE_URL = "http://localhost:3030/"
 
-//List of Routes
-///sites/:siteId/getUsers
-//sites/:siteId
-//users/:userId
+
 function App (){
   const [users, setUsers] = useState([])
   const[sites, setSites] = useState([])
+  const [newUser, setNewUser] = useState({
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "phone_number": "",
+    "first_dose-date": "",
+    "second_dose_date": "",
+    "site_id": ""
+  })
   
   
   //Define the GeAllUsers function 
@@ -27,6 +33,36 @@ function App (){
     console.log(sites)
     setSites(sitesData)
   }
+
+  //Get User Details 
+  // const handleUserChange = (e) => {
+  //   const {key, value} = e.target
+  //   setNewUser({
+  //     [key]: value
+  //   })
+  // }
+  // const createNewUser = async (e) => {
+  //   const response = await fetch(
+  //     `${BASE_URL}sites/:siteId/newuser`, {
+  //       method: 'POST',
+  //       headers:{
+  //         'Accept': 'application/json',
+  //         'Content-Type': 'application/json'
+  //       },
+  //       body: JSON.stringify({
+  //         "first_name": "",
+  //         "last_name": "",
+  //         "email": "",
+  //         "phone_number": "",
+  //         "first_dose-date": "",
+  //         "second_dose_date": "",
+  //         "site_id": ""
+  //       })
+  //     })
+  //     .then(response => response.json());
+  //     .then(data => )
+
+  // }
 
   useEffect(() => {
     getAllUsers()

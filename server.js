@@ -1,10 +1,12 @@
 const express = require('express')
 const app = express();
+const cors = require('cors');
 
 const Site = require("./api/site")
 const Users = require("./api/users")
 
 app.use(express.json());
+app.use(cors())
 
 const PORT = process.env.PORT || 3030
 
