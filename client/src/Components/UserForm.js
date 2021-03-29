@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Col, Row, Form } from 'react-bootstrap';
+import { Col, Row, Form, Label, Input, FormGroup } from 'reactstrap';
 
 export default function UserForm(props){
     
@@ -8,32 +8,44 @@ export default function UserForm(props){
             <Form>
                 <Row>
                     <Col>
-                        <Form.Label>First Name</Form.Label>
-                        <Form.Control placeholder="Enter First name" name="firstName" onChange= {props.change} value={props.val.first_name} />
+                    <FormGroup>
+                        <Label>First Name</Label>
+                        <Input placeholder="Enter First name" name="firstName" onChange= {props.change} value={props.val.first_name} />
+                    </FormGroup>
                     </Col>
                     <Col>
-                        <Form.Label>Last Name</Form.Label>
-                        <Form.Control placeholder="Enter Last Name" />
-                    </Col>
-                </Row>
-                <Row>
-                    <Col>
-                        <Form.Label>Phone Number</Form.Label>
-                        <Form.Control placeholder="Mobile Number" />
-                    </Col>
-                    <Col>
-                        <Form.Label>Email</Form.Label>
-                        <Form.Control placeholder="Email" />
+                    <FormGroup>
+                        <Label>Last Name</Label>
+                        <Input placeholder="Enter Last Name" />
+                        </FormGroup>
                     </Col>
                 </Row>
                 <Row>
                     <Col>
-                        <Form.Label>Zip Code</Form.Label>
-                        <Form.Control placeholder="Mobile Number" />
+                    <FormGroup>
+                        <Label>Phone Number</Label>
+                        <Input placeholder="Mobile Number" />
+                    </FormGroup>
                     </Col>
                     <Col>
-                        <Form.Label>Initial Appointmet</Form.Label>
-                        <Form.Control type ="date" placeholder="Pick A Date" />
+                    <FormGroup>
+                        <Label>Email</Label>
+                        <Input placeholder="Email" />
+                        </FormGroup>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col>
+                    <FormGroup>
+                        <Label>Zip Code</Label>
+                        <Input placeholder="Mobile Number" />
+                        </FormGroup>
+                    </Col>
+                    <Col>
+                    <FormGroup>
+                        <Label>Initial Appointmet</Label>
+                        <Input type ="date" placeholder="Pick A Date" />
+                        </FormGroup>
                     </Col>
                 </Row>
             </Form>

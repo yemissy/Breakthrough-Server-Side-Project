@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Col, Row, Form } from 'react-bootstrap';
+import { Col, Row, Form, Label, Input, FormGroup } from 'reactstrap';
 // import Button from 'react-bootstrap/Button';
 
 
@@ -13,42 +13,52 @@ export default function SiteForm(props){
                 {/* {btnClick === 1 ? <UserList users={props.users}/> :setBtnClick(btnClick = 0)} */}
                 <Row>
                     <Col>
-                        <Form.Label>Organizaton Name</Form.Label>
-                        <Form.Control placeholder="Organization Name" />
+                    <FormGroup> 
+                        <Label>Organizaton Name</Label>
+                        <Input placeholder="Organization Name" />
+                    </FormGroup>
                     </Col>
                     <Col>
-                        <Form.Label>Address</Form.Label>
-                        <Form.Control placeholder="Address" />
-                    </Col>
-                </Row>
-                <Row>
-                    <Col>
-                        <Form.Label>City</Form.Label>
-                        <Form.Control placeholder="City" />
-                    </Col>
-                    <Col>
-                        <Form.Label>State</Form.Label>
-                        <Form.Control placeholder="State" />
+                    <FormGroup> 
+                        <Label>Address</Label>
+                        <Input placeholder="Address" />
+                    </FormGroup> 
                     </Col>
                 </Row>
                 <Row>
                     <Col>
-                        <Form.Label>Zip Code</Form.Label>
-                        <Form.Control placeholder="Zip Code" />
+                    <FormGroup>
+                        <Label>City</Label>
+                        <Input placeholder="City" />
+                    </FormGroup>
                     </Col>
                     <Col>
-                        <Form.Label>Start Date</Form.Label>
-                        <Form.Control type ="date" placeholder="Start Date" />
+                    <FormGroup>
+                        <Label>State</Label>
+                        <Input placeholder="State" />
+                    </FormGroup>
                     </Col>
                 </Row>
                 <Row>
                     <Col>
-                        <Form.Label>Status</Form.Label>
-                        <Form.Control placeholder="Status" />
+                    <FormGroup>
+                    <Label>Zip Code</Label>
+                        <Input placeholder="Zip Code" />
+                    </FormGroup>
                     </Col>
                     <Col>
-                        <Form.Label>Vaccine Type</Form.Label>
-                        <Form.Control placeholder="Pfizer" />
+                        <Label>Start Date</Label>
+                        <Input type ="date" placeholder="Start Date" />
+                    </Col>
+                </Row>
+                <Row>
+                    <Col>
+                        <Label>Status</Label>
+                        <Input placeholder="Status" />
+                    </Col>
+                    <Col>
+                        <Label>Vaccine Type</Label>
+                        <Input placeholder="Pfizer" />
                     </Col>
                 </Row>
             </Form>

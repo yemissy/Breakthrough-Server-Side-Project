@@ -48,6 +48,7 @@
 .entity_form {
   text-align: left;
   width: 36em;
+  padding: 1em;
 }
 #user_btn {
   position: relative;
@@ -63,10 +64,6 @@
   position: relative;
   left: 5em;
   top: 1em;
-}
-
-.entity_form {
-  padding: 1em;
 }
 
 .placeholder {
