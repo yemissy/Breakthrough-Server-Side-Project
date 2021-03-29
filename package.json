@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon server.js",
+    "dev": "webpack --mode development && node server/index.js",
+    "build": "webpack --mode production",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,10 +21,7 @@
   },
   "homepage": "https://github.com/ShrutiTamrakarTuladhar/Breakthrough-Server-Side-Project#readme",
   "dependencies": {
-<<<<<<< HEAD
-=======
     "bootstrap": "^4.6.0",
->>>>>>> 2e2792262816862c72d4a03a4a36fd90c072e9b4
     "cors": "^2.8.5",
     "ejs": "^3.1.6",
     "express": "^4.17.1",

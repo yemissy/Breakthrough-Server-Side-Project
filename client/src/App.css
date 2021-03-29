@@ -1,38 +1,68 @@
-.App {
+.table {
+  font-size: 12px;
+}
+
+.table_div {
+  border: 1px solid black;
+  width: 40em;
+  height: 15em;
+  overflow-x: scroll;
+  overflow-y: scroll;
+  margin-bottom: 2.5em;
+
+}
+
+#outter_userList_div{
   text-align: center;
+  width: 40em;
+  margin-right: 2em;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/*  Sites Table */
+#outter_siteList_div{
+  text-align: center;
+  width: 40em;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#list_div{
+  position: relative;
+  top: 3em;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+
+/* Forms Styling */
+
+#forms_div{
+  display: flex;
+  justify-content: center;
+}
+#user_form{
+  border: 1px solid black;
+  margin-right: 3em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#site_form{
+  border: 1px solid black;
+  /* text-align: center;
+  width: 35em; */
+}
+.entity_form{
+  text-align: left;
+  width: 36em;
+}
+#user_btn {
+  position: relative;
+  left: 20em;
+  bottom:1em;
+}
+#site_btn {
+  position: relative;
+  left: 20em;
+  bottom:1em;
+}
+.heading_text{
+  position: relative;
+  left: 5em;
+  top:1em;
 }

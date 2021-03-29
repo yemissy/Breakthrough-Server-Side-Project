@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import UserForm from './Components/User';
-// import UserList from './Components/UserList';
+import Lists from './Components/Lists';
+import Forms from './Components/Forms';
 
 const BASE_URL = "http://localhost:3030/"
 
@@ -38,12 +38,18 @@ function App (){
 
   //Get User Details 
   const handleUserChange = (e) => {
+    console.log(e.value)
     const {key, value} = e.target
+    console.log(key, value)
     setNewUser({
       [key]: value
     })
+    console.log(newUser)
   }
+
+
   const createNewUser = async (e) => {
+
     await fetch(
       `${BASE_URL}sites/:siteId/newuser`, {
         method: 'POST',
@@ -60,12 +66,14 @@ function App (){
 
   useEffect(() => {
     getAllUsers()
-    // getAllSites()
+    getAllSites()
   })
 
   return (
     <div className="App">
-        <UserForm users={users}/>
+      <Forms handleChange={handleUserChange} value={newUser}/>
+      <Lists users={users} sites={sites}/>
+
     </div>
   );
 }

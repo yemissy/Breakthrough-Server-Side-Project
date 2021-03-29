@@ -1,19 +1,15 @@
-// <<<<<<< HEAD
-// import React from 'react'
- 
-// export default function UserForm(props){
-// =======
 import React from 'react';
 import { Table } from 'reactstrap';
+import '../App.css';
 
 //Show Table with user data 
 function UserList(props){
     return(
-        <div>
-            <Table>
+        <div class="table_div">
+            <Table class="table" striped bordered hover size="sm">
             <thead>
                 <tr>
-                <th>First Name</th>
+                <th colspan="2">First Name</th>
                 <th>Last Name</th>
                 <th>Email</th>
                 <th>Phone Number</th>
@@ -24,7 +20,18 @@ function UserList(props){
                 </tr>
             </thead>
                 <tbody>
-            {/* function called here to add rows of data */}
+                    {props.userData.map(user => (
+                        <tr>
+                            <td colSpan = "2">{user.first_name}</td>
+                            <td>{user.last_name}</td>
+                            <td>{user.email}</td>
+                            <td>{user.phone_number}</td>
+                            <td>{user.first_dose_date}</td>
+                            <td>{user.second_dose_date}</td>
+                            <td>{user.site_id}</td>
+                            <td>{user.zip_code}</td>
+                        </tr>
+                    ))}
                 </tbody>
             </Table>
         </div>

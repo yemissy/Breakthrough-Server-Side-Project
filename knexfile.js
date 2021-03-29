@@ -8,7 +8,7 @@ module.exports = {
     // connection: process.env.DATABASE_URL || { user: 'me', database: 'my_app' }
     connection: {
       database: 'covid-db',
-      user: 'shruti',
+      user: 'missy',
       password: ''
     },
   },

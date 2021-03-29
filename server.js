@@ -5,16 +5,15 @@ const cors = require('cors')
 
 const Site = require("./api/site")
 const Users = require("./api/users")
+
 app.use(express.json());
 app.use(cors())
 
 const PORT = process.env.PORT || 3030
-
 // Add routes here
 // fat data-models skinny handles 
 
-//TODO: ADD ROUTES FOR SITES
-
+ //TODO: ADD ROUTES FOR SITES
 app.get('/sites', async (req, res) => {
   try {
     const sites = await Site.getAll(); 
