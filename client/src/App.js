@@ -30,39 +30,30 @@ function App (){
   const getAllSites = async () => {
     const response = await fetch(`${BASE_URL}sites`);
     const sitesData = await response.json();
-    console.log(sites)
     setSites(sitesData)
   }
 
   //Get User Details 
-  // const handleUserChange = (e) => {
-  //   const {key, value} = e.target
-  //   setNewUser({
-  //     [key]: value
-  //   })
-  // }
-  // const createNewUser = async (e) => {
-  //   const response = await fetch(
-  //     `${BASE_URL}sites/:siteId/newuser`, {
-  //       method: 'POST',
-  //       headers:{
-  //         'Accept': 'application/json',
-  //         'Content-Type': 'application/json'
-  //       },
-  //       body: JSON.stringify({
-  //         "first_name": "",
-  //         "last_name": "",
-  //         "email": "",
-  //         "phone_number": "",
-  //         "first_dose-date": "",
-  //         "second_dose_date": "",
-  //         "site_id": ""
-  //       })
-  //     })
-  //     .then(response => response.json());
-  //     .then(data => )
-
-  // }
+  const handleUserChange = (e) => {
+    const {key, value} = e.target
+    setNewUser({
+      [key]: value
+    })
+  }
+  const createNewUser = async (e) => {
+    await fetch(
+      `${BASE_URL}sites/:siteId/newuser`, {
+        method: 'POST',
+        headers:{
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(newUser)
+      })
+      .then(response => response.json())
+      .then(data => console.log(data))
+      .catch(err => console.log(err))
+  }
 
   useEffect(() => {
     getAllUsers()

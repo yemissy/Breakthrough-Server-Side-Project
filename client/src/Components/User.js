@@ -9,7 +9,7 @@ export default function UserForm(props){
     return(
         <div>
             <Button onClick={() => setBtnClick(btnClick + 1)} id ="get_user">Get User</Button>
-            {btnClick === 1 ? <UserList users={props.users}/> : null}
+            {btnClick > 1 ? <UserList users={props.users}/> : null}
 
         </div>
     )
