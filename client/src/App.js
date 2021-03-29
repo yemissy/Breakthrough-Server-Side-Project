@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import UserForm from './Components/User';
-import UserList from './Components/UserList';
-import './App.css';
+// import UserList from './Components/UserList';
 
 const BASE_URL = "http://localhost:3030/"
 
@@ -9,6 +8,11 @@ const BASE_URL = "http://localhost:3030/"
 ///sites/:siteId/getUsers
 //sites/:siteId
 //users/:userId
+
+
+// create a user/site
+// delete a user/site
+
 function App (){
   const [users, setUsers] = useState([])
   const[sites, setSites] = useState([])
@@ -21,6 +25,7 @@ function App (){
     const usersData = await response.json();
     setUsers(usersData)
   }
+
   const getAllSites = async () => {
     const response = await fetch(`${BASE_URL}sites`);
     const sitesData = await response.json();
@@ -30,14 +35,12 @@ function App (){
 
   useEffect(() => {
     getAllUsers()
-    getAllSites()
+    // getAllSites()
   })
 
   return (
     <div className="App">
-      <header className="App-header">
         <UserForm users={users}/>
-      </header>
     </div>
   );
 }
