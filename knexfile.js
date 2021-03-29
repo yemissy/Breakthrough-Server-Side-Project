@@ -7,8 +7,8 @@ module.exports = {
     client: 'postgresql',
     // connection: process.env.DATABASE_URL || { user: 'me', database: 'my_app' }
     connection: {
-      database: 'covid-project',
-      user: 'shruti',
+      database: 'covid-db',
+      user: 'missy',
       password: ''
     },
   },
