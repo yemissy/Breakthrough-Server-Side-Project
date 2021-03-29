@@ -71,6 +71,7 @@ function App (){
 
   return (
     <div className="App">
+    <div className="placeholder"></div>
       <Forms handleChange={handleUserChange} value={newUser}/>
       <Lists users={users} sites={sites}/>
 

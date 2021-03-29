@@ -9,60 +9,66 @@
   overflow-x: scroll;
   overflow-y: scroll;
   margin-bottom: 2.5em;
-
 }
 
-#outter_userList_div{
+#outter_userList_div {
   text-align: center;
   width: 40em;
   margin-right: 2em;
 }
 
 /*  Sites Table */
-#outter_siteList_div{
+#outter_siteList_div {
   text-align: center;
   width: 40em;
 }
-#list_div{
+#list_div {
   position: relative;
   top: 3em;
   display: flex;
   justify-content: center;
 }
 
-
 /* Forms Styling */
 
-#forms_div{
+#forms_div {
   display: flex;
   justify-content: center;
 }
-#user_form{
+#user_form {
   border: 1px solid black;
   margin-right: 3em;
 }
 
-#site_form{
+#site_form {
   border: 1px solid black;
   /* text-align: center;
   width: 35em; */
 }
-.entity_form{
+.entity_form {
   text-align: left;
   width: 36em;
 }
 #user_btn {
   position: relative;
   left: 20em;
-  bottom:1em;
+  bottom: 1em;
 }
 #site_btn {
   position: relative;
   left: 20em;
-  bottom:1em;
+  bottom: 1em;
 }
-.heading_text{
+.heading_text {
   position: relative;
   left: 5em;
-  top:1em;
+  top: 1em;
+}
+
+.entity_form {
+  padding: 1em;
+}
+
+.placeholder {
+  padding: 1%;
 }

@@ -48,7 +48,7 @@ export default function SiteForm(props){
                     </Col>
                     <Col>
                         <Form.Label>Vaccine Type</Form.Label>
-                        <Form.Control type ="date" placeholder="Pfizer" />
+                        <Form.Control placeholder="Pfizer" />
                     </Col>
                 </Row>
             </Form>
