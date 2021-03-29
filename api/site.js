@@ -28,12 +28,21 @@ class Site {
   }
 
   // filter all active sites/ inactive sites - appoints avalibity 
-  static async filter(siteStatus){
+  static async filterStatus(siteStatus){
     const filteredSites = await db.any('SELECT * FROM sites WHERE status = $1', [siteStatus]); 
     return filteredSites; 
   }
 
-  // filter by start_Date 
+  static async filterZipCode(siteZipCode){
+    const filteredSites = await db.any('SELECT * FROM sites WHERE zip_code = $1', [siteZipCode]); 
+    return filteredSites; 
+  }
+
+  static async filterState(siteState) {
+    const filteredSites = await db.any('SELECT * FROM sites WHERE state = $1', [siteState]); 
+    return filteredSites; 
+  }
+
 
   async addSite() {
 

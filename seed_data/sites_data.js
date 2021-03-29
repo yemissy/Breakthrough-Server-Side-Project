@@ -1,24 +1,42 @@
 module.exports = [
   {
-    address: "8 Southampton Ave. Mcdonough, GA 30252", 
+    name: "Aqueduct Racetrack", 
+    address: "Racing Hall, 110-00 Rockaway Blvd", 
+    city: "South Ozone Park", 
+    state: "NY", 
+    zip_code: "11420",
     start_date: "2020-12-20", 
     status: "active",
-    opening_time: "09:00:00",
-    closing_time: "22:00:00"
-
+    vaccine_type: "pfizer",
   }, 
   {
-    address: "565 Lawrence St. Haines City, FL 33844", 
-    start_date: "2021-01-15", 
+    name: "Javits Center", 
+    address: "429 11th Avenue", 
+    city: "New York", 
+    state: "NY", 
+    zip_code: "10018",
+    start_date: "2020-12-20", 
     status: "active",
-    opening_time: "08:00:00",
-    closing_time: "21:00:00"
+    vaccine_type: "Janssen – J & J",
   }, 
   {
-    address: "240 Nicolls Court Hackensack, NJ 07601", 
-    start_date: "2020-12-30", 
-    status: "inactive",
-    opening_time: "10:00:00",
-    closing_time: "20:00:00"
+    name: "SUNY Stony Brook", 
+    address: "100 Nichols Rd", 
+    city: "Stony Brook", 
+    state: "NY", 
+    zip_code: "11794",
+    start_date: "2020-12-20", 
+    status: "active",
+    vaccine_type: "Moderna",
+  },   
+  {
+    name: "SUNY BINGHAMTON", 
+    address: "10 Gannett Drive", 
+    city: "Johnson City", 
+    state: "NY", 
+    zip_code: "13790",
+    start_date: "2020-12-20", 
+    status: "active",
+    vaccine_type: "pfizer",
   }, 
 ]; 

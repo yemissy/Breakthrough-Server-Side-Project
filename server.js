@@ -3,7 +3,6 @@ const app = express();
 
 const Site = require("./api/site")
 const Users = require("./api/users")
-const db = require('./db');
 
 app.use(express.json());
 
@@ -47,15 +46,40 @@ app.get('/sites/:siteId', async(req, res) => {
     }
 });
 
+//filter by status
 app.get('/sites/status/:siteStatus', async(req, res) => {
   const siteStatus = req.params.siteStatus
   try {
-    const users = await Site.filter(siteStatus); 
+    const users = await Site.filterStatus(siteStatus); 
     return res.json(users);
   } catch (err) {
     return res.status(500).send(err); 
   }
 });
+
+//filter by zipcode
+
+app.get('/sites/zipCode/:siteZipCode', async(req, res) => {
+  const siteZipCode = req.params.siteZipCode
+  try {
+    const users = await Site.filterZipCode(siteZipCode); 
+    return res.json(users);
+  } catch (err) {
+    return res.status(500).send(err); 
+  }
+});
+
+// filter by state
+app.get('/sites/state/:siteState', async(req, res) => {
+  const siteZipCode = req.params.siteState
+  try {
+    const users = await Site.filterState(siteZipCode); 
+    return res.json(users);
+  } catch (err) {
+    return res.status(500).send(err); 
+  }
+});
+
 
 app.delete('/sites/:siteId', async(req, res) => {
   const siteId = parseInt(req.params.siteId, 10)
@@ -87,7 +111,7 @@ app.patch('/sites/:siteId', async (req, res) => {
 app.get('/sites/:siteId/getUsers', async(req, res) => {
   const siteId = req.params.siteId;
   try {
-    console.log(siteId);
+//    console.log(siteId);
     const users = await Site.getUsers(siteId);  
     return res.send(users); 
   } catch (err) {
@@ -95,7 +119,6 @@ app.get('/sites/:siteId/getUsers', async(req, res) => {
   }
 });
 
-// app.get -> filter currently open 
 
 
 
@@ -103,7 +126,7 @@ app.get('/sites/:siteId/getUsers', async(req, res) => {
 
 //Get all users
 app.get('/users', async(req, res) => {
-  console.log(req.params, 'line 105')
+  // console.log(req.params, 'line 105')
   try{
     const users = await Users.getAllUsers(req.params.id);
     res.send(users);
@@ -114,7 +137,7 @@ app.get('/users', async(req, res) => {
 });
 
 app.get('/users/:userId', async(req, res) => {
-  console.log(req, 'line 115')
+  // console.log(req, 'line 115')
   const userId = parseInt(req.params.userId)
   try{
     const user = await Users.getUserWithId(userId);
