@@ -24,6 +24,8 @@
   width: 40em;
 }
 #list_div{
+  height: 25em;
+  border: 2px solid lightskyblue;
   position: relative;
   top: 3em;
   display: flex;
@@ -49,7 +51,8 @@
 }
 .entity_form{
   text-align: left;
-  width: 36em;
+  width: 38em;
+  height: 20em;
 }
 #user_btn {
   position: relative;

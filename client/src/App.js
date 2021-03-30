@@ -12,13 +12,14 @@ function App (){
   const [users, setUsers] = useState([])
   const[sites, setSites] = useState([])
   const [newUser, setNewUser] = useState({
-    "first_name": "",
-    "last_name": "",
-    "email": "",
-    "phone_number": "",
-    "first_dose-date": "",
-    "second_dose_date": "",
-    "site_id": ""
+    first_name: "",
+    last_name: "",
+    email: "",
+    phone_number: "",
+    first_dose_date: "",
+    zip_code: "",
+    first_dose_date: "", //initial appointment
+    site_id: "", //Desired Location
   })
   
   
@@ -36,13 +37,28 @@ function App (){
     setSites(sitesData)
   }
 
+  //Get the ID of the site
+  const getSiteId = (site_name) =>{
+    console.log(site_name)
+    let id = ""
+    for(let key in sites){
+      console.log(sites[key], site_name)
+    }
+
+  }
   //Get User Details 
   const handleUserChange = (e) => {
     console.log(e.value)
-    const {key, value} = e.target
-    console.log(key, value)
+    const {name, value} = e.target
+    console.log(name, value)
+    let site_name = ""
+    `${name === "site_id"?  site_name = value : null}`
+    getSiteId(site_name)
     setNewUser({
-      [key]: value
+      ...newUser,
+      [name]: `${name !== "site_id" ? value : 1 }`
+      //calculate second dose date
+      
     })
     console.log(newUser)
   }
@@ -71,7 +87,7 @@ function App (){
 
   return (
     <div className="App">
-      <Forms handleChange={handleUserChange} value={newUser}/>
+      <Forms handleChange={handleUserChange} value={newUser} sites={sites}/>
       <Lists users={users} sites={sites}/>
 
     </div>
