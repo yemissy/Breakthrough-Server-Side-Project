@@ -13,8 +13,8 @@ export default function UserForms(props){
                 <UserForm change={props.handleChange} val ={props.value} sites={props.sites}/>
             </div>
             <div id="site_form">
-                <h5 class="heading_text">CREATE NEW USER</h5>
-                <Button onClick={() => setBtnClick(btnClick + 1)} id="user_btn">Enter User</Button>
+                <h5 class="heading_text">CREATE NEW SITE</h5>
+                <Button onClick={() => setBtnClick(btnClick + 1)} id="user_btn">Enter Site</Button>
                 <SiteForm />
             </div>   
         </div>

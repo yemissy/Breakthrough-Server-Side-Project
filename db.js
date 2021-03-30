@@ -7,7 +7,7 @@ const db = pg({
   "host": "localhost",
   "port": 5432,
   "database": "covid-db",
-  "user": "missy"
+  "user": "shruti"
 })
 
 module.exports = db;
