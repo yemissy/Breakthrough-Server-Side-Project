@@ -9,7 +9,7 @@ To create a user /site/:siteId/user
 */
 
 class Users{
-    constructor({id,first_name, last_name, email, phone_number, first_dose_date, second_dose_date}){
+    constructor({id,first_name, last_name, email, phone_number, first_dose_date, second_dose_date, zip_code, site_id}){
         this.id = id
         this.first_name = first_name
         this.last_name = last_name
@@ -17,6 +17,8 @@ class Users{
         this.phone_number = phone_number
         this.first_dose_date = first_dose_date
         this.second_dose_date = second_dose_date
+        this.zip_code = zip_code
+        this.site_id = site_id
     }
     //GET All Users
 
@@ -38,15 +40,16 @@ class Users{
     //GET Users with Site_ID
 
     //Create/POST new USER 
-    async createUser(site_id){
-        await db.none("INSERT INTO Users (first_name, last_name, email, phone_number, first_dose_date, second_dose_date, site_id) VALUES ($1, $2, $3, $4, $5, $6, $7)", [
+    async createUser(){
+        await db.none("INSERT INTO Users (first_name, last_name, email, phone_number, first_dose_date, second_dose_date, zip_code, site_id) VALUES ($1, $2, $3, $4, $5, $6, $7, $8)", [
             this.first_name,
             this.last_name,
             this.email,
             this.phone_number,
             this.first_dose_date,
             this.second_dose_date,
-            site_id
+            this.zip_code,
+            this.site_id
         ])
     }
     //UPDATE a user with ID

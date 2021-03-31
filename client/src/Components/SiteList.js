@@ -21,7 +21,7 @@ function SitesList(props){
             </thead>
                 <tbody>
                     {props.sitesData.map(site => (
-                        <tr>
+                        <tr key={site.id}>
                             <td>{site.name}</td>
                             <td>{site.address}</td>
                             <td>{site.city}</td>

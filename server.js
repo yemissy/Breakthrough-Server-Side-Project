@@ -151,10 +151,13 @@ app.get('/users/:userId', async(req, res) => {
 
 app.post('/sites/:siteId/newuser', async(req, res) => {
   //instantiate new user
+  console.log(req.params, 'line 154')
+  console.log(req.body, '155')
   const newUser = new Users(req.body)
-  const site_id = parseInt(req.params.siteId)
+  console.log(newUser)
+  // const site_id = parseInt(req.body.siteId)
   try{
-    await newUser.createUser(site_id);
+    await newUser.createUser();
     res.status(200).json({
       message: "User sucessfully created"
     })

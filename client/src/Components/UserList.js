@@ -9,7 +9,7 @@ function UserList(props){
             <Table class="table" striped bordered hover size="sm">
             <thead>
                 <tr>
-                <th colspan="2">First Name</th>
+                <th >First Name</th>
                 <th>Last Name</th>
                 <th>Email</th>
                 <th>Phone Number</th>
@@ -21,8 +21,8 @@ function UserList(props){
             </thead>
                 <tbody>
                     {props.userData.map(user => (
-                        <tr>
-                            <td colSpan = "2">{user.first_name}</td>
+                        <tr key={user.id}>
+                            <td>{user.first_name}</td>
                             <td>{user.last_name}</td>
                             <td>{user.email}</td>
                             <td>{user.phone_number}</td>

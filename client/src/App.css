@@ -1,3 +1,7 @@
+.header{
+  text-align: center;
+  top: 2em;
+}
 .table {
   font-size: 12px;
 }
@@ -24,7 +28,7 @@
 }
 #list_div {
   position: relative;
-  top: 3em;
+  top: 6em;
   display: flex;
   justify-content: center;
 }
@@ -34,16 +38,18 @@
 #forms_div {
   display: flex;
   justify-content: center;
+  position: relative;
+  top: 3em;
 }
 #user_form {
   border: 1px solid black;
   margin-right: 3em;
+  box-shadow: 0px 3px 7px 1px grey;
 }
 
 #site_form {
   border: 1px solid black;
-  /* text-align: center;
-  width: 35em; */
+  box-shadow: 0px 3px 7px 1px grey;
 }
 .entity_form {
   text-align: left;
