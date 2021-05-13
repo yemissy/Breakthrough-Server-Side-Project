@@ -4,8 +4,7 @@
   "description": "You will be task with building an Express API to be consumed by a Front-end client.",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js",
-    "heroku-postbuild": "cd client && npm install && npm run build",
+    "start": "nodemon server.js",
     "dev": "webpack --mode development && node server/index.js",
     "build": "webpack --mode production",
     "test": "echo \"Error: no test specified\" && exit 1"
