@@ -4,23 +4,12 @@
   "description": "You will be task with building an Express API to be consumed by a Front-end client.",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon server.js",
+    "start": "node server.js",
     "heroku-postbuild": "cd client && npm install && npm run build",
     "dev": "webpack --mode development && node server/index.js",
     "build": "webpack --mode production",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ShrutiTamrakarTuladhar/Breakthrough-Server-Side-Project.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ShrutiTamrakarTuladhar/Breakthrough-Server-Side-Project/issues"
-  },
-  "homepage": "https://github.com/ShrutiTamrakarTuladhar/Breakthrough-Server-Side-Project#readme",
   "dependencies": {
     "bootstrap": "^4.6.0",
     "cors": "^2.8.5",
